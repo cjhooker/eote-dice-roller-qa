@@ -120,7 +120,7 @@
         <div id="content-settings" class="content ng-hide" ng-hide="!showSettings">
             <div id="settings-container">
                 <div id="settings-close" ng-click="showSettings=false">
-                    <img src="images/close-button.png" alt="Close Settings" />
+                    <img src="https://cjhooker.github.io/eote-dice-roller-qa/images/close-button.png" alt="Close Settings" />
                 </div>
 
                 <h1>Settings</h1>
