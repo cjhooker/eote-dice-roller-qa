@@ -208,7 +208,7 @@ input[type="checkbox"]:checked + label span {
 }
 .content .debugWatermark {
   position: absolute;
-  right: 10px;
+  right: 15px;
   bottom: 0;
   font-size: 50px;
   font-weight: bold;
