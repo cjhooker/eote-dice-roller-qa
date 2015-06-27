@@ -115,6 +115,7 @@
         <div id="content-main" class="content" ng-hide="showSettings">
             <div id="outputArea" class="{{imageSize}}">
             </div>
+            <div class='debugWatermark'>QA</div>
         </div>
 
         <div id="content-settings" class="content" ng-show="showSettings">
@@ -126,6 +127,7 @@
                         ng-change="imageSizeChange()"
                         ng-options="value.id as value.label for value in imageSizeOptions"></select>
             </div>
+            <div class='debugWatermark'>QA</div>
         </div>
 
         <div id="footer">
