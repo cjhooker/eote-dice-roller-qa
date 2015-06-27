@@ -125,7 +125,9 @@
 
                 <input class="button" type="button" value="Insert Break Line" id="insertBreak" ng-click="insertBreak()" />
 
-                <img class="settings-button" src="https://cjhooker.github.io/eote-dice-roller-qa/images/settings-blue.png" alt="Settings" ng-click="toggleSettingsDisplay()" />
+                <img class="settings-button" ng-src="https://cjhooker.github.io/eote-dice-roller-qa/images/{{settingsButtonSrc}}" alt="Settings"
+                     ng-init="settingsButtonSrc='settings.png'" ng-mouseover="settingsButtonSrc='settings-hover.png'" ng-mouseout="settingsButtonSrc='settings.png'"
+                     ng-click="toggleSettingsDisplay()" />
             </div>
         </div>
     </div>
