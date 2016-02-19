@@ -34,6 +34,7 @@ appModule.controller("appController", ["$scope", "$compile", "diceService", "mes
 
             // Set the dice quantities when the app first loads
             $scope.diceQuantities = [];
+            //$scope.symbolQuantities = [];
             $scope.resetDiceQuantities();
             $scope.numericDieType = 100;
         }
@@ -43,6 +44,15 @@ appModule.controller("appController", ["$scope", "$compile", "diceService", "mes
                 $scope.diceQuantities[color] = 0;
             }
             $scope.diceQuantities['Numeric'] = 0;
+        }
+
+        $scope.resetSymbolQuantites = function () {
+            $scope.diceQuantities['Success'] = 0;
+            $scope.diceQuantities['Advantage'] = 0;
+            $scope.diceQuantities['Triumph'] = 0;
+            $scope.diceQuantities['Failure'] = 0;
+            $scope.diceQuantities['Threat'] = 0;
+            $scope.diceQuantities['Despair'] = 0;
         }
 
         $scope.insertBreak = function () {
@@ -71,10 +81,6 @@ appModule.controller("appController", ["$scope", "$compile", "diceService", "mes
             } else {
                 getOutputArea().prepend("<div class='alert'>No dice selected!</div>");
             }
-        }
-
-        $scope.rollStandardDie = function (maxValue, postText) {
-            diceService.rollStandardDie(maxValue, postText);
         }
 
         $scope.displayMessage = function (message) {
@@ -175,6 +181,7 @@ appModule.controller("appController", ["$scope", "$compile", "diceService", "mes
             $scope.showMore = !$scope.showMore;
             if (!$scope.showMore) {
                 $scope.rollCaption = "";
+                $scope.resetSymbolQuantites();
             }
         }
 
