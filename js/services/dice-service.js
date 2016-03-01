@@ -31,7 +31,7 @@ appModule.service("diceService", ["messageService", function (messageService) {
                     var result = Math.floor(Math.random() * numericDieType) + 1;
                     if (numericDieType == 100) { result += "%"; }
 
-                    diceResults.push({ die: color, result: result });
+                    diceResults.push({ die: color, numericDieType: "d" + numericDieType, result: result });
                 }
                 else {
                     diceResults.push({ die: color, result: getRoll(this.dice[color]) });
